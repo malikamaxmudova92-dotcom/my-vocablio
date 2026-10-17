@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TUIT Learn — Online Learning Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">TL</span><span>TUIT <b>Learn</b><small>ONLINE LEARNING PLATFORM</small></span></a>
+  <nav><a href="#dashboard">Dashboard</a><a href="#courses">Courses</a><a href="#schedule">Schedule</a></nav>
+  <div class="profile"><span class="avatar">MM</span><span><b>Malika M.</b><small>Student account</small></span></div>
+</header>
+<main class="layout">
+  <aside class="sidebar">
+    <p class="side-label">WORKSPACE</p>
+    <a class="side-link active" href="#dashboard">▦ &nbsp; Overview</a>
+    <a class="side-link" href="#courses">▤ &nbsp; My courses</a>
+    <a class="side-link" href="#assignments">✓ &nbsp; Assignments</a>
+    <a class="side-link" href="#schedule">▦ &nbsp; Schedule</a>
+    <div class="help-card"><div class="help-icon">✦</div><b>Need some help?</b><p>Check your courses or review the learning guide.</p><button id="helpBtn" class="outline-btn">Open learning guide</button></div>
+  </aside>
+  <section class="content" id="dashboard">
+    <div class="welcome-row"><div><p class="eyebrow">TUESDAY, SEPTEMBER 29, 2026</p><h1>Good evening, Malika <span>✦</span></h1><p class="muted">Keep learning, one step at a time.</p></div><button class="primary-btn" id="continueBtn">Continue learning ↗</button></div>
+    <div class="stats">
+      <article class="stat-card"><span class="stat-icon violet">▤</span><p>Enrolled courses</p><h2>4</h2><small>2 courses in progress</small></article>
+      <article class="stat-card"><span class="stat-icon green">✓</span><p>Completed lessons</p><h2 id="completedCount">12</h2><small>Keep up the good work</small></article>
+      <article class="stat-card"><span class="stat-icon orange">◷</span><p>Learning hours</p><h2>18.5</h2><small>This month</small></article>
+      <article class="stat-card"><span class="stat-icon blue">☆</span><p>Average score</p><h2>86%</h2><small>Across completed quizzes</small></article>
+    </div>
+    <div class="section-heading"><div><h2>Continue your learning</h2><p class="muted">Pick up where you left off.</p></div><a href="#courses">View all courses →</a></div>
+    <div class="course-grid" id="courses">
+      <article class="course-card"><div class="course-cover cover-blue"><span>WEB DEVELOPMENT</span><div class="cover-art">〈 / 〉</div></div><div class="course-body"><div class="course-meta"><span>DESIGN & CODE</span><span>8 lessons</span></div><h3>Web Development Basics</h3><p class="muted">Learn HTML, CSS and JavaScript fundamentals.</p><div class="progress-line"><span style="width:65%"></span></div><div class="progress-text"><span>65% completed</span><span>5/8 lessons</span></div><button class="course-btn" data-course="Web Development Basics">Open course</button></div></article>
+      <article class="course-card"><div class="course-cover cover-purple"><span>DATA & ANALYTICS</span><div class="cover-art">▥</div></div><div class="course-body"><div class="course-meta"><span>COMPUTER SCIENCE</span><span>10 lessons</span></div><h3>Introduction to Databases</h3><p class="muted">Understand tables, queries and database design.</p><div class="progress-line"><span style="width:35%"></span></div><div class="progress-text"><span>35% completed</span><span>3/10 lessons</span></div><button class="course-btn" data-course="Introduction to Databases">Open course</button></div></article>
+      <article class="course-card"><div class="course-cover cover-green"><span>ACADEMIC SKILLS</span><div class="cover-art">Aa</div></div><div class="course-body"><div class="course-meta"><span>LANGUAGE</span><span>6 lessons</span></div><h3>Academic English</h3><p class="muted">Improve writing, reading and academic vocabulary.</p><div class="progress-line"><span style="width:80%"></span></div><div class="progress-text"><span>80% completed</span><span>5/6 lessons</span></div><button class="course-btn" data-course="Academic English">Open course</button></div></article>
+    </div>
+    <div class="lower-grid">
+      <section class="panel" id="assignments"><div class="section-heading compact"><div><h2>Upcoming assignments</h2><p class="muted">Keep track of your deadlines.</p></div><span class="pill">2 tasks</span></div>
+        <div class="task"><span class="task-icon">HTML</span><div class="task-info"><b>Build a simple web page</b><small>Web Development Basics</small></div><span class="due soon">Tomorrow</span></div>
+        <div class="task"><span class="task-icon purple-text">SQL</span><div class="task-info"><b>Database query practice</b><small>Introduction to Databases</small></div><span class="due">Oct 03</span></div>
+      </section>
+      <section class="panel" id="schedule"><div class="section-heading compact"><div><h2>Today's schedule</h2><p class="muted">Your planned learning sessions.</p></div></div>
+        <div class="schedule-item"><span class="time">10:00</span><span class="time-dot blue-dot"></span><div><b>Web Development</b><small>Video lesson · 30 min</small></div></div>
+        <div class="schedule-item"><span class="time">14:30</span><span class="time-dot purple-dot"></span><div><b>Database practice</b><small>Exercise · 45 min</small></div></div>
+        <div class="schedule-item"><span class="time">18:00</span><span class="time-dot green-dot"></span><div><b>English vocabulary</b><small>Quiz · 15 min</small></div></div>
+      </section>
+    </div>
+    <footer>© 2026 TUIT Learn · Student project prototype · Demo data only</footer>
+  </section>
+</main>
+<div class="modal-backdrop" id="modal" hidden><section class="modal"><button class="close-btn" id="closeModal" aria-label="Close">×</button><p class="eyebrow">LEARNING SPACE</p><h2 id="modalTitle">Course details</h2><p id="modalText" class="muted"></p><div class="lesson-box"><b>Lesson 1: Introduction</b><p>Review the learning objectives and key concepts for this lesson.</p><button id="lessonBtn" class="primary-btn">Mark lesson complete ✓</button></div><div class="quiz-box"><b>Quick knowledge check</b><p>Which technology is used to structure the content of a web page?</p><label><input type="radio" name="quiz" value="CSS"> CSS</label><label><input type="radio" name="quiz" value="HTML"> HTML</label><label><input type="radio" name="quiz" value="SQL"> SQL</label><button id="checkQuiz" class="outline-btn">Check answer</button><p id="quizFeedback" aria-live="polite"></p></div></section></div>
+<script src="script.js"></script>
+</body></html>
